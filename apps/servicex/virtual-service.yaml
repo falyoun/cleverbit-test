@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: servicex
+  namespace: istio-system
+spec:
+  hosts:
+    - servicex.cb-interview.com
+  gateways:
+    - servicex-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: servicex.servicex.svc.cluster.local
+            port:
+              number: 80
