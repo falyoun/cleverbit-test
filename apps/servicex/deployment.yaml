@@ -18,6 +18,8 @@ spec:
       containers:
         - image: falyoun/cleverbit:s2s-latest
           name: s2s
+          ports:
+            - containerPort: 8080
           resources:
             requests:
               cpu: 100m
