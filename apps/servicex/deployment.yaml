@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: authority
-  name: authority
-  namespace: authority
+    app: servicex
+  name: servicex
+  namespace: servicex
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: authority
+      app: servicex
   template:
     metadata:
       labels:
-        app: authority
+        app: servicex
     spec:
       containers:
-        - image: falyoun/cleverbit:authority-latest
-          name: authority
+        - image: falyoun/cleverbit:s2s-latest
+          name: s2s
           resources:
             requests:
               cpu: 100m
