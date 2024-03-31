@@ -8,6 +8,7 @@ spec:
   targetNamespace: authority
   path: ./apps/authority
   prune: true
+  force: true
   sourceRef:
     kind: GitRepository
     name: flux-system

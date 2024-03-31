@@ -8,6 +8,7 @@ spec:
   targetNamespace: servicex
   path: ./apps/servicex
   prune: true
+  force: true
   sourceRef:
     kind: GitRepository
     name: flux-system
