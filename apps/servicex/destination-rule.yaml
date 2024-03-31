@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: authority-destination
+spec:
+  host: servicex.servicex.svc.cluster.local
+  trafficPolicy:
+    tls:
+      mode: ISTIO_MUTUAL
+    portLevelSettings:
+      - port:
+          number: 80
+        tls:
+          mode: ISTIO_MUTUAL
+      - port:
+          number: 443
+        tls:
+          mode: ISTIO_MUTUAL
+  subsets:
+    - name: version-v1
+      labels:
+        app: servicex
+  authorization:
+    name: jwt-policy
