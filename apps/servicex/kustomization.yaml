@@ -8,4 +8,5 @@ resources:
   - virtual-service.yaml
   - secret.yaml
   - jwt-policy.yaml
+  - authorization-policy.yaml
   - destination-rule.yaml
