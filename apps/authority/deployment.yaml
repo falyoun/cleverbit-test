@@ -18,6 +18,8 @@ spec:
       containers:
         - image: falyoun/cleverbit:authority-latest
           name: authority
+          ports:
+            - containerPort: 8080
           resources:
             requests:
               cpu: 100m
