@@ -5,6 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
+  targetNamespace: authority
   path: ./apps/authority
   prune: true
   sourceRef:

@@ -5,6 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
+  targetNamespace: servicex
   path: ./apps/servicex
   prune: true
   sourceRef:
